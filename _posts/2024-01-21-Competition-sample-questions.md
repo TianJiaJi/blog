@@ -1,14 +1,13 @@
 ---
 layout:       post
 title: 中等院校职业技能大赛-竞赛样题(网络搭建与应用)
-author: TianJiaJi
+copyright_author: TianJiaJi
 date: 2024-01-18 12:00:00 +0800
-categories: [博客,教程,职业技能大赛]
+categories: [博客,题目,教程,职业技能大赛]
 header-style: text
 catalog:      true
 tags:
     - 题目
-    - 教程
     - 职业技能大赛
 pin: true
 math: true
@@ -291,6 +290,9 @@ mermaid: true
 
 1.  配置 linux2 为 kdc 服务器，负责 linux3 和 linux4 的验证。
 2.  在 linux3 上，创建用户，用户名为 xiao，uid=2000，gid=2000，家目录 为/home/xiaodir。
+3.	配置 linux3 为 nfs 服务器，目录/srv/sharenfs 的共享要求为：linux 服务器所在网络用户有读写权限，所有用户映射为 xiao，kdc 加密方 式为 krb5p。 
+4.	配置 linux4 为 nfs 客户端，利用 autofs 按需挂载 linux3 上的 /srv/sharenfs 到/sharenfs 目录，挂载成功后在该目录创建 test 目 录。
+
 
 ### 9. mail 服务
 
@@ -304,4 +306,5 @@ mermaid: true
 
 任务描述：请采用 shell 脚本,实现快速批量的操作。
 
-1.  在 linux4 上编写/root/createfile.sh的shell脚本，创建20个文件/root/shell/file00至/root/shell/file19，如果文件存在，则删除再创建； 每个文件的内容同文件名， 如file00文件的内容为“file00”。用/root/createfile.sh命令测试。
+1.  在 linux4 上编写/root/createfile.sh的shell脚本，创建20个文件/root/shell/file00至/root/shell/file19，如果文件存在，则删除再创建； 每个文件的内容同文件名， 如file00文件的内容为“file00”。
+2. 用/root/createfile.sh命令测试。
