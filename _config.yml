@@ -13,7 +13,7 @@ baseurl: "https://blog.tianjiaji.dedyn.io/blog2" # for example, '/blog' if your 
 future: true
 
 # SNS settings
-RSS: false
+RSS: true
 #weibo_username: huxpro
 #zhihu_username: huxpro
 github_username: TianJiaJi
